@@ -1,0 +1,18 @@
+{
+  "short_name": "React App",
+  "name": "Goofale",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts":["worker.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "./index.html",
+    "default_title": "app"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}
