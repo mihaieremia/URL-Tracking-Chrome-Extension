@@ -5,17 +5,17 @@ import {Pie} from 'react-chartjs-2';
 class App extends Component {
   constructor(props){
     super(props);
-    this.state={
+    this.state=({
       topcount:[],
     toptime:[]
+    });
   }
-  }
-  compenentWillMount(){
-    axios.get(`http://localhost/api/topcount/dccd73ac1d46983e87ec42f1a66ba54551e6eb823872247e91c4af857770`)
+  componentDidMount(){
+    axios.get(`http://infoeducatie-web-open/api/topcount/dccd73ac1d46983e87ec42f1a66ba54551e6eb823872247e91c4af857770`)
     .then(res => {
       this.setState({ topcount:res.data });
     });
-    axios.get(`http://localhost/api/toptime/dccd73ac1d46983e87ec42f1a66ba54551e6eb823872247e91c4af857770`)
+    axios.get(`http://infoeducatie-web-open/api/toptime/dccd73ac1d46983e87ec42f1a66ba54551e6eb823872247e91c4af857770`)
     .then(res => {
       this.setState({ toptime:res.data });
     });

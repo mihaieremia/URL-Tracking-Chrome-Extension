@@ -32,7 +32,7 @@ if(tab.status=="complete")
         userid: id.userid
       };
       (async () => {
-        const rawResponse = await fetch('http://localhost/api/close', {
+        const rawResponse = await fetch('http://infoeducatie-web-open/api/close', {
           method: 'POST',
           headers: {
             //'Accept': 'application/json',
@@ -87,7 +87,7 @@ chrome.tabs.onActivated.addListener(function(activeInfo) {
           };
           lastTabId=tabid;
           (async () => {
-            const rawResponse = await fetch('http://localhost/api/close', {
+            const rawResponse = await fetch('http://infoeducatie-web-open/api/close', {
               method: 'POST',
               headers: {
              //   'Accept': 'application/json',
@@ -121,7 +121,7 @@ chrome.tabs.onRemoved.addListener(function(tabId, removeInfo) {
         userid: id.userid
       };
           (async () => {
-            const rawResponse = await fetch('http://localhost/api/close', {
+            const rawResponse = await fetch('http://infoeducatie-web-open/api/close', {
               method: 'POST',
               headers: {
               // 'Accept': 'application/json',
@@ -143,7 +143,7 @@ chrome.runtime.onInstalled.addListener(function(details){
               info: info.os,
               userid: userid
             };
-              fetch('http://localhost/api/new', {
+              fetch('http://infoeducatie-web-open/api/new', {
                 method: 'POST',
                 headers: {
                   'Accept': 'application/json',
